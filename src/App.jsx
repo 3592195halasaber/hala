@@ -22,6 +22,9 @@ const routing = createBrowserRouter([
       { path: "About", element: <About /> },
       { path: "Contant", element: <Contant /> },
       { path: "*", element: <NotFoned /> }]
+  },
+  {
+    base: '/hala/',
   }
 
 ])
