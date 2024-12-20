@@ -1,6 +1,4 @@
-
 import './App.css'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LayOut from './Componant/LayOut/LayOut'
 import Footer from './Componant/Footer/Footer'
@@ -10,24 +8,26 @@ import About from './Componant/LayOut/About'
 import Home from './Componant/LayOut/Home'
 import NotFoned from './Componant/NotFoned/NotFoned'
 
-import"flowbite/dist/flowbite.js";
+import "flowbite/dist/flowbite.js";
 
 const routing = createBrowserRouter([
 
   {
     element: <LayOut />, path: "", children: [
       { index: true, element: <Home /> },
-      { path:"Home", element: <Home /> },
+      { path: "Home", element: <Home /> },
       { path: "Portfolio", element: <Portfolio /> },
       { path: "About", element: <About /> },
       { path: "Contant", element: <Contant /> },
       { path: "*", element: <NotFoned /> }]
   },
-  {
-    base: '/hala/',
-  }
 
-])
+
+],
+  {
+    basename: '/hala',
+  }
+)
 function App() {
 
   return (
